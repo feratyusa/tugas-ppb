@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga: Rp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textJumlahBarang"
+        app:layout_constraintVertical_bias="0.094"
+        app:layout_constraintWidth_max="wrap" />
+
+    <TextView
+        android:id="@+id/textUang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uang Bayar: Rp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textHarga"
+        app:layout_constraintVertical_bias="0.103"
+        app:layout_constraintWidth_max="wrap" />
+
+    <TextView
+        android:id="@+id/textPembeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pembeli"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044"
+        app:layout_constraintWidth_max="wrap" />
+
+    <EditText
+        android:id="@+id/pembeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:ems="10"
+        android:hint="Nama"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@id/textPembeli"
+        app:layout_constraintStart_toStartOf="@+id/textPembeli" />
+
+    <TextView
+        android:id="@+id/textBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Barang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textPembeli"
+        app:layout_constraintVertical_bias="0.081"
+        app:layout_constraintWidth_max="wrap" />
+
+    <TextView
+        android:id="@+id/textJumlahBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Barang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textBarang"
+        app:layout_constraintVertical_bias="0.084"
+        app:layout_constraintWidth_max="wrap" />
+
+    <EditText
+        android:id="@+id/barang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:ems="10"
+        android:hint="Barang"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@id/textBarang"
+        app:layout_constraintEnd_toEndOf="@id/pembeli"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/pembeli" />
+
+    <EditText
+        android:id="@+id/jumlah_barang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Jumlah Barang"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@id/textJumlahBarang"
+        app:layout_constraintEnd_toEndOf="@id/barang"
+        app:layout_constraintStart_toStartOf="@id/barang" />
+
+    <EditText
+        android:id="@+id/harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Harga"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@id/textHarga"
+        app:layout_constraintEnd_toEndOf="@id/jumlah_barang"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/jumlah_barang" />
+
+    <EditText
+        android:id="@+id/uang_bayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Uang Bayar"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@id/textUang"
+        app:layout_constraintEnd_toEndOf="@id/harga"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/harga" />
+
+    <Button
+        android:id="@+id/proses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:ellipsize="none"
+        android:onClick="onProses"
+        android:text="Proses"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uang_bayar"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/proses" />
+
+    <TextView
+        android:id="@+id/viewPembeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pembeli :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proses"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <TextView
+        android:id="@+id/viewBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Barang :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPembeli"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/viewJumlahBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Barang :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewBarang"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/viewHargaBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga Barang :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/valueJumlahBarang"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/viewUangBayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uang Bayar :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewHargaBarang"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/viewTotalBelanja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Belanja :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewUangBayar"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/viewUangKembalian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uang Kembalian :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTotalBelanja"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/viewBonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bonus :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewUangKembalian"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/viewKeterangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keterangan :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewBonus"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/valuePembeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:text="Kosong"
+        android:textAlignment="textStart"
+        app:layout_constraintBaseline_toBaselineOf="@id/viewPembeli"
+        app:layout_constraintStart_toStartOf="@+id/viewPembeli" />
+
+    <TextView
+        android:id="@+id/valueJumlahBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kosong"
+        android:textAlignment="textStart"
+        app:layout_constraintBaseline_toBaselineOf="@id/viewJumlahBarang"
+        app:layout_constraintEnd_toEndOf="@id/valueBarang"
+        app:layout_constraintStart_toStartOf="@id/valueBarang" />
+
+    <TextView
+        android:id="@+id/valueBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kosong"
+        android:textAlignment="textStart"
+        app:layout_constraintBaseline_toBaselineOf="@id/viewBarang"
+        app:layout_constraintEnd_toEndOf="@id/valuePembeli"
+        app:layout_constraintStart_toStartOf="@id/valuePembeli" />
+
+    <TextView
+        android:id="@+id/valueHargaBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kosong"
+        android:textAlignment="textStart"
+        app:layout_constraintBaseline_toBaselineOf="@id/viewHargaBarang"
+        app:layout_constraintEnd_toEndOf="@id/valueJumlahBarang"
+        app:layout_constraintStart_toStartOf="@id/valueJumlahBarang" />
+
+    <TextView
+        android:id="@+id/valueUangBayar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kosong"
+        android:textAlignment="textStart"
+        app:layout_constraintBaseline_toBaselineOf="@id/viewUangBayar"
+        app:layout_constraintEnd_toEndOf="@id/valueHargaBarang"
+        app:layout_constraintStart_toStartOf="@id/valueHargaBarang" />
+
+    <TextView
+        android:id="@+id/valueUangKembalian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kosong"
+        android:textAlignment="textStart"
+        app:layout_constraintBaseline_toBaselineOf="@id/viewUangKembalian"
+        app:layout_constraintEnd_toEndOf="@id/valueUangBayar"
+        app:layout_constraintStart_toStartOf="@id/valueUangBayar" />
+
+    <TextView
+        android:id="@+id/valueBonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kosong"
+        android:textAlignment="textStart"
+        app:layout_constraintBaseline_toBaselineOf="@id/viewBonus"
+        app:layout_constraintEnd_toEndOf="@id/valueUangBayar"
+        app:layout_constraintStart_toStartOf="@id/valueUangBayar" />
+
+    <TextView
+        android:id="@+id/valueKeterangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kosong"
+        android:textAlignment="textStart"
+        app:layout_constraintBaseline_toBaselineOf="@id/viewKeterangan"
+        app:layout_constraintEnd_toEndOf="@id/valueUangBayar"
+        app:layout_constraintStart_toStartOf="@id/valueUangBayar" />
+
+    <TextView
+        android:id="@+id/valueTotalBelanja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kosong"
+        android:textAlignment="textStart"
+        app:layout_constraintBaseline_toBaselineOf="@id/viewTotalBelanja"
+        app:layout_constraintEnd_toEndOf="@id/valueUangBayar"
+        app:layout_constraintStart_toStartOf="@id/valueUangBayar" />
+
+    <Button
+        android:id="@+id/hapusData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onHapusData"
+        android:text="Hapus Data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/keluar"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewKeterangan" />
+
+    <Button
+        android:id="@+id/keluar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onKeluar"
+        android:text="Keluar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="@id/hapusData"
+        app:layout_constraintTop_toBottomOf="@+id/viewKeterangan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
