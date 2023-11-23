@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Penilaian</string>
+    <string name="label_nama">Nama</string>
+    <string name="label_nrp">NRP</string>
+    <string name="label_nilai">Nilai</string>
+    <string name="label_nilai_matematika">Matematika</string>
+    <string name="label_nilai_dasprog">Dasar\nPemrograman</string>
+    <string name="label_nilai_strukdat">Struktur Data</string>
+    <string name="label_hasil">Hasil</string>
+</resources>
